@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인민수</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    
+    #profileImage {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    .info {
+      margin-top: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 인민수 프로필 이미지</h1>
+    
+    <svg id="profileImage" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <!-- 배경 -->
+      <rect width="400" height="400" fill="#f5f5f0"/>
+      
+      <!-- 얼굴 -->
+      <circle cx="200" cy="180" r="85" fill="#fdd5b8"/>
+      
+      <!-- 목 -->
+      <rect x="175" y="255" width="50" height="35" fill="#fdd5b8"/>
+      
+      <!-- 귀 -->
+      <ellipse cx="125" cy="180" rx="15" ry="25" fill="#fdd5b8"/>
+      <ellipse cx="275" cy="180" rx="15" ry="25" fill="#fdd5b8"/>
+      
+      <!-- 머리카락 -->
+      <ellipse cx="200" cy="120" rx="90" ry="50" fill="#2d2d2d"/>
+      <path d="M 110 140 Q 110 100 200 95 Q 290 100 290 140" fill="#2d2d2d"/>
+      
+      <!-- 안경 -->
+      <g stroke="#4a4a4a" stroke-width="4" fill="none">
+        <!-- 왼쪽 렌즈 -->
+        <circle cx="170" cy="175" r="28" fill="rgba(255,255,255,0.3)"/>
+        <!-- 오른쪽 렌즈 -->
+        <circle cx="230" cy="175" r="28" fill="rgba(255,255,255,0.3)"/>
+        <!-- 브릿지 -->
+        <line x1="198" y1="175" x2="202" y2="175" stroke-width="3"/>
+        <!-- 왼쪽 다리 -->
+        <path d="M 142 175 Q 130 175 125 180" stroke-linecap="round"/>
+        <!-- 오른쪽 다리 -->
+        <path d="M 258 175 Q 270 175 275 180" stroke-linecap="round"/>
+      </g>
+      
+      <!-- 눈 -->
+      <circle cx="170" cy="175" r="6" fill="#2d2d2d"/>
+      <circle cx="230" cy="175" r="6" fill="#2d2d2d"/>
+      
+      <!-- 눈썹 -->
+      <path d="M 145 160 Q 160 155 175 158" stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 225 158 Q 240 155 255 160" stroke="#2d2d2d" stroke-width="3" fill="none" stroke-linecap="round"/>
+      
+      <!-- 코 -->
+      <path d="M 200 185 L 200 205 Q 200 210 205 210" stroke="#d4a088" stroke-width="2" fill="none" stroke-linecap="round"/>
+      
+      <!-- 입 (미소) -->
+      <path d="M 175 225 Q 200 235 225 225" stroke="#d4a088" stroke-width="3" fill="none" stroke-linecap="round"/>
+      
+      <!-- 셔츠 -->
+      <rect x="125" y="280" width="150" height="120" fill="#5b8fb8" rx="5"/>
+      
+      <!-- 셔츠 칼라 -->
+      <path d="M 175 280 L 165 310 L 185 295 Z" fill="#4a7a9e"/>
+      <path d="M 225 280 L 235 310 L 215 295 Z" fill="#4a7a9e"/>
+      
+      <!-- 셔츠 버튼 -->
+      <circle cx="200" cy="310" r="3" fill="#ffffff"/>
+      <circle cx="200" cy="330" r="3" fill="#ffffff"/>
+      <circle cx="200" cy="350" r="3" fill="#ffffff"/>
+      
+      <!-- 클립보드/코드 아이콘 (왼쪽 하단) -->
+      <g transform="translate(50, 320)">
+        <rect x="0" y="0" width="40" height="50" rx="3" fill="#ffffff" stroke="#4a4a4a" stroke-width="2"/>
+        <line x1="8" y1="12" x2="32" y2="12" stroke="#5b8fb8" stroke-width="2"/>
+        <line x1="8" y1="20" x2="28" y2="20" stroke="#5b8fb8" stroke-width="2"/>
+        <line x1="8" y1="28" x2="32" y2="28" stroke="#5b8fb8" stroke-width="2"/>
+        <line x1="8" y1="36" x2="25" y2="36" stroke="#5b8fb8" stroke-width="2"/>
+      </g>
+      
+      <!-- 체크 아이콘 (오른쪽 하단) -->
+      <g transform="translate(310, 325)">
+        <circle cx="20" cy="20" r="20" fill="#7fb069"/>
+        <path d="M 12 20 L 18 26 L 30 14" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      
+      <!-- 이름 태그 -->
+      <rect x="100" y="35" width="200" height="40" rx="20" fill="#ffffff" stroke="#4a4a4a" stroke-width="2"/>
+      <text x="200" y="62" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2d2d2d" text-anchor="middle">인민수</text>
+    </svg>
+    
+    <button onclick="downloadPNG()">📥 PNG 다운로드 (1200x1200)</button>
+    
+    <div class="info">
+      클릭하면 고해상도 PNG 파일이 다운로드됩니다
+    </div>
+  </div>
+
+  <script>
+    function downloadPNG() {
+      const svg = document.getElementById('profileImage');
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      
+      // 1200x1200 해상도 설정
+      canvas.width = 1200;
+      canvas.height = 1200;
+      
+      // SVG를 문자열로 변환
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(svgBlob);
+      
+      img.onload = () => {
+        // Canvas에 이미지 그리기
+        ctx.drawImage(img, 0, 0, 1200, 1200);
+        
+        // PNG로 변환 및 다운로드
+        canvas.toBlob(blob => {
+          const link = document.createElement('a');
+          link.download = '인민수_프로필.png';
+          link.href = URL.createObjectURL(blob);
+          link.click();
+          
+          // 메모리 정리
+          URL.revokeObjectURL(url);
+        }, 'image/png');
+      };
+      
+      img.src = url;
+    }
+  </script>
+</body>
+</html>
